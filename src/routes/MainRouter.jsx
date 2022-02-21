@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Welcome from '../components/Welcome';
-import Layout from '../components/Layout/Layout';
-import Cola from '../pages/Cola';
+import Welcome from 'components/Welcome';
+import Layout from 'components/Layout';
+import Cola from 'pages/Cola';
 
 function MainRouter() {
   return (
