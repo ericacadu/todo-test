@@ -14,4 +14,4 @@
 
 ## Component concept
 
-<img src="./media/todolist.png" alt="" width="300" />
+<img src="./media/todolist.png" alt="" width="600" />
