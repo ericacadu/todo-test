@@ -14,4 +14,4 @@
 
 ## Component concept
 
-![todolist](./media/todolist.png | width=300)
+<img src="./media/todolist.png" alt="" width="300" />
