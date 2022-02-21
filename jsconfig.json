@@ -1,6 +1,6 @@
 {
-  "include": ["src/**/*.{js,jsx}"],
   "compilerOptions": {
     "baseUrl": "./src"
-  }
+  },
+  "include": ["src/**/*.{js,jsx}"]
 }
