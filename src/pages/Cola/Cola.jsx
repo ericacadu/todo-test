@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import Todolist from './Todolist';
+import TodoList from './_TodoList';
 
 function Cola() {
   return (
     <Routes>
-      <Route index element={<Todolist />} />
-      <Route path="todo" element={<Todolist />} />
+      <Route index element={<TodoList />} />
+      <Route path="todo" element={<TodoList />} />
     </Routes>
   );
 }
