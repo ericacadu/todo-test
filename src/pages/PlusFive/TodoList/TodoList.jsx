@@ -10,7 +10,7 @@ import { useState } from 'react';
 import './index.css';
 import Todo from './components/todo';
 import Form from './components/form';
-import AddBtn from './components/addBtn';
+// import AddBtn from './components/addBtn';
 
 function TodoList(prop) {
   // initial tasks value is prop.tasks (after object destructuring is tasks)
