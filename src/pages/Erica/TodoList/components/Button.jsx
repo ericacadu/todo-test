@@ -1,18 +1,18 @@
 import clsx from 'clsx';
+import { PencilIcon, TrashIcon } from '@heroicons/react/solid';
 
-export function Button({ text, color = 'bg-slate-400 hover:bg-slate-600', onClick }) {
+export function Button({ icon, onClick, className }) {
   return (
     <button
       type="button"
-      onClick={onClick}
       className={clsx(
-        'mr-1.5 px-3 py-2 text-sm',
-        'rounded text-white outline-none',
-        'duration-350 transition',
-        color
+        'aspect-square rounded-md border  p-2 transition-all duration-200',
+        className || 'border-slate-200 hover:bg-slate-200 hover:text-cyan-600'
       )}
+      onClick={onClick}
     >
-      {text}
+      {icon === 'edit' && <PencilIcon className="w-5" />}
+      {icon === 'delete' && <TrashIcon className="w-5" />}
     </button>
   );
 }
