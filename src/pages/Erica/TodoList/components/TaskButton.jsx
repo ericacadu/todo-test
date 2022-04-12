@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import { PencilIcon, TrashIcon } from '@heroicons/react/solid';
+import { PencilIcon, TrashIcon } from '../icons';
 
-export function Button({ icon, onClick, className }) {
+export function TaskButton({ icon, onClick, className }) {
   return (
     <button
       type="button"

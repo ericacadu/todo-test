@@ -1,10 +1,10 @@
 import clsx from 'clsx';
-import { CheckIcon } from '@heroicons/react/solid';
-import { Button, Input } from './';
-import { useTodoContext } from '../todoContext';
+import { TaskButton, TaskInput } from './';
+import { CheckIcon } from '../icons';
+import { useTodoList } from '../todoContext';
 
 export function TaskItem({ todo }) {
-  const { updateTask, editTask, openModal } = useTodoContext();
+  const { toggleState, editTask } = useTodoList();
   const { title, id, isEdit, isDone } = todo;
   return (
     <li
@@ -15,13 +15,13 @@ export function TaskItem({ todo }) {
     >
       {isEdit && (
         <label className={clsx('flex w-full')}>
-          <Input value={title} onInput={(e) => editTask(e, id)} />
+          <TaskInput value={title} onInput={(e) => editTask(e, id)} />
         </label>
       )}
       {!isEdit && (
         <label
           className={clsx('flex w-full cursor-pointer items-center overflow-x-hidden')}
-          onClick={() => updateTask(id, 'isDone')}
+          onClick={() => toggleState(id, 'isDone')}
         >
           <span
             className={clsx(
@@ -36,21 +36,21 @@ export function TaskItem({ todo }) {
       )}
 
       <div className="flex items-center space-x-1">
-        <Button
-          icon="edit"
-          onClick={() => updateTask(id, 'isEdit')}
+        <TaskButton
           className={clsx(
             isDone && 'border-slate-300',
             isEdit ? 'border-yellow-300 bg-yellow-300 text-white' : 'hover:text-cyan-600'
           )}
+          icon="edit"
+          onClick={() => toggleState(id, 'isEdit')}
         />
-        <Button
+        <TaskButton
           icon="delete"
           className={clsx(
             'hover:bg-slate-200 hover:text-red-400',
             isDone && 'border-slate-300 hover:bg-transparent'
           )}
-          onClick={() => openModal(id, 'Are you sure to delete')}
+          // onClick={() => openModal(id, 'Are you sure to delete')}
         />
       </div>
     </li>

@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-export function Input({ value, onInput }) {
+export function TaskInput({ value, onInput }) {
   return (
     <input
       type="text"
